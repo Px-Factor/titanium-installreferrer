@@ -27,4 +27,12 @@ or NULL if no INSTALL_REFERRER was received from Google Play.
 Since the INSTALL_REFERRER string is saved with the application, it will be returned (if sent) every time you call getUtmSource() method, so if you want to track this only after the application has been launched for the first time, you will have to implement it yourself.
 
 # TESTING
-If you want to test it without having to upload an APK to Google Play, you can use the [Referral Tester](https://play.google.com/store/apps/details?id=com.giago.referraltester) app (NOT FREE) which will simulate a market broadcast.
+You can test this module by running the following command in Terminal
+
+    ./adb shell am broadcast -a com.android.vending.INSTALL_REFERRER --es "referrer" "utm_source%3Dtest_utm_source%26utm_medium%3Dutm_test_medium"
+
+quit your application and starts it again.
+
+You can use the [Referral Tester](https://play.google.com/store/apps/details?id=com.giago.referraltester) app (NOT FREE) which will simulate a market broadcast.
+
+Please check example/app.js for sample code.
