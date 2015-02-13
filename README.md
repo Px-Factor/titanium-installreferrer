@@ -31,7 +31,7 @@ You can test this module by running the following command in Terminal
 
     ./adb shell am broadcast -a com.android.vending.INSTALL_REFERRER --es "referrer" "utm_source%3Dtest_utm_source%26utm_medium%3Dutm_test_medium"
 
-quit your application and starts it again.
+quit your application and start it again.
 
 You can use the [Referral Tester](https://play.google.com/store/apps/details?id=com.giago.referraltester) app (NOT FREE) which will simulate a market broadcast.
 
